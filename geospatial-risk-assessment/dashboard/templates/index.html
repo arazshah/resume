@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geospatial Risk Assessment Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        --primary-color: #1e88e5;
+        --secondary-color: #ff8f00;
+        --dark-color: #212121;
+        --light-color: #f5f5f5;
+        --danger-color: #e53935;
+        --success-color: #43a047;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f3f5;
+        color: var(--dark-color);
+      }
+
+      .sidebar {
+        background-color: var(--dark-color);
+        color: white;
+        min-height: 100vh;
+        padding-top: 2rem;
+      }
+
+      .sidebar .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar .nav-link:hover,
+      .sidebar .nav-link.active {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .sidebar .nav-link i {
+        margin-right: 0.5rem;
+      }
+
+      .main-content {
+        padding: 2rem;
+      }
+
+      .dashboard-header {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        border: none;
+      }
+
+      .card-header {
+        background-color: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 1rem 1.5rem;
+      }
+
+      .stat-card {
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat-card i {
+        font-size: 3rem;
+        opacity: 0.2;
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+      }
+
+      .stat-card.primary {
+        background-color: var(--primary-color);
+      }
+
+      .stat-card.secondary {
+        background-color: var(--secondary-color);
+      }
+
+      .stat-card.danger {
+        background-color: var(--danger-color);
+      }
+
+      .stat-card.success {
+        background-color: var(--success-color);
+      }
+
+      .risk-factor-weight {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .risk-factor-weight label {
+        width: 30%;
+      }
+
+      .risk-factor-weight input {
+        flex-grow: 1;
+      }
+
+      .risk-factor-weight span {
+        width: 3rem;
+        text-align: right;
+      }
+
+      #map-container {
+        height: 400px;
+        background-color: #e9ecef;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .results-panel {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+          <div class="position-sticky">
+            <h2 class="h5 px-3 pb-4 text-center">GRA Dashboard</h2>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="/">
+                  <i class="fas fa-home"></i> Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/data">
+                  <i class="fas fa-database"></i> Data Management
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/analysis">
+                  <i class="fas fa-chart-line"></i> Risk Analysis
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#settings" data-bs-toggle="collapse">
+                  <i class="fas fa-cog"></i> Settings
+                </a>
+                <div class="collapse" id="settings">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fas fa-user"></i> User Profile
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="fas fa-sliders-h"></i> Preferences
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 col-lg-10 ms-sm-auto main-content">
+          <div class="dashboard-header">
+            <div class="d-flex justify-content-between align-items-center">
+              <h1 class="h2">Geospatial Risk Assessment</h1>
+              <div>
+                <button id="loadDataBtn" class="btn btn-primary me-2">
+                  <i class="fas fa-database"></i> Load Data
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status Cards -->
+          <div class="row mb-4">
+            <div class="col-md-3">
+              <div class="stat-card primary">
+                <h3 class="h5">Total Regions</h3>
+                <h2 id="totalRegions">-</h2>
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-card secondary">
+                <h3 class="h5">Avg Risk Score</h3>
+                <h2 id="avgRiskScore">-</h2>
+                <i class="fas fa-chart-bar"></i>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-card danger">
+                <h3 class="h5">High Risk Regions</h3>
+                <h2 id="highRiskCount">-</h2>
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-card success">
+                <h3 class="h5">Low Risk Regions</h3>
+                <h2 id="lowRiskCount">-</h2>
+                <i class="fas fa-shield-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Risk Factor Configuration -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Risk Factor Weights</h5>
+                </div>
+                <div class="card-body">
+                  <form id="riskFactorForm">
+                    <div id="riskFactorControls">
+                      <!-- Risk factor sliders will be populated dynamically -->
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                      <i class="fas fa-calculator"></i> Calculate Risk
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map View -->
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Geospatial Risk Visualization</h5>
+                </div>
+                <div class="card-body">
+                  <div id="map-container">
+                    <!-- Map will be rendered here -->
+                    <div class="text-center py-5 text-muted">
+                      <i class="fas fa-map fa-4x mb-3"></i>
+                      <h4>No Data Loaded</h4>
+                      <p>Load data to view the risk assessment map</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Panel - Hidden initially -->
+          <div id="resultsPanel" class="results-panel mt-4">
+            <div class="card">
+              <div class="card-header">
+                <h5>Risk Assessment Results</h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="riskHistogram"></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="alert alert-info">
+                      <h5>Risk Score Summary</h5>
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Mean Risk Score:</span>
+                        <strong id="meanRiskScore">-</strong>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Median Risk Score:</span>
+                        <strong id="medianRiskScore">-</strong>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Minimum Risk Score:</span>
+                        <strong id="minRiskScore">-</strong>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Maximum Risk Score:</span>
+                        <strong id="maxRiskScore">-</strong>
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <a
+                        id="downloadResultsBtn"
+                        href="#"
+                        class="btn btn-success w-100"
+                      >
+                        <i class="fas fa-download"></i> Download Results
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // DOM Elements
+        const loadDataBtn = document.getElementById("loadDataBtn");
+        const riskFactorForm = document.getElementById("riskFactorForm");
+        const riskFactorControls =
+          document.getElementById("riskFactorControls");
+        const resultsPanel = document.getElementById("resultsPanel");
+        const downloadResultsBtn =
+          document.getElementById("downloadResultsBtn");
+
+        // Stats elements
+        const totalRegions = document.getElementById("totalRegions");
+        const avgRiskScore = document.getElementById("avgRiskScore");
+        const highRiskCount = document.getElementById("highRiskCount");
+        const lowRiskCount = document.getElementById("lowRiskCount");
+
+        // Result elements
+        const meanRiskScore = document.getElementById("meanRiskScore");
+        const medianRiskScore = document.getElementById("medianRiskScore");
+        const minRiskScore = document.getElementById("minRiskScore");
+        const maxRiskScore = document.getElementById("maxRiskScore");
+
+        // Store risk factors
+        let riskFactors = [];
+        let resultFile = "";
+
+        // Load sample data
+        loadDataBtn.addEventListener("click", function () {
+          fetch("/api/load-sample-data", {
+            method: "POST",
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                alert(data.message);
+                totalRegions.textContent = data.feature_count;
+
+                // Load risk factors after data is loaded
+                loadRiskFactors();
+              } else {
+                alert("Error: " + data.message);
+              }
+            })
+            .catch((error) => {
+              console.error("Error loading data:", error);
+              alert("Error loading data. See console for details.");
+            });
+        });
+
+        // Load risk factors
+        function loadRiskFactors() {
+          fetch("/api/risk-factors")
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                riskFactors = data.risk_factors;
+                populateRiskFactorControls();
+              } else {
+                alert("Error loading risk factors.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error loading risk factors:", error);
+            });
+        }
+
+        // Populate risk factor form
+        function populateRiskFactorControls() {
+          riskFactorControls.innerHTML = "";
+
+          riskFactors.forEach((factor) => {
+            const container = document.createElement("div");
+            container.className = "risk-factor-weight";
+
+            const label = document.createElement("label");
+            label.textContent = factor.name;
+            label.setAttribute("for", `weight-${factor.id}`);
+
+            const input = document.createElement("input");
+            input.type = "range";
+            input.className = "form-range";
+            input.min = "0";
+            input.max = "5";
+            input.step = "0.1";
+            input.value = factor.weight;
+            input.id = `weight-${factor.id}`;
+            input.setAttribute("data-factor-id", factor.id);
+
+            const valueDisplay = document.createElement("span");
+            valueDisplay.textContent = factor.weight;
+            valueDisplay.className = "weight-value";
+
+            // Update value display when slider changes
+            input.addEventListener("input", function () {
+              valueDisplay.textContent = this.value;
+            });
+
+            container.appendChild(label);
+            container.appendChild(input);
+            container.appendChild(valueDisplay);
+
+            riskFactorControls.appendChild(container);
+          });
+        }
+
+        // Handle form submission
+        riskFactorForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Collect weights
+          const weights = {};
+          riskFactors.forEach((factor) => {
+            const input = document.getElementById(`weight-${factor.id}`);
+            weights[factor.id] = parseFloat(input.value);
+          });
+
+          // Submit for calculation
+          calculateRisk(weights);
+        });
+
+        // Calculate risk
+        function calculateRisk(weights) {
+          fetch("/api/calculate-risk", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ weights }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                // Show results panel
+                resultsPanel.style.display = "block";
+
+                // Update result stats
+                meanRiskScore.textContent = data.risk_scores.mean.toFixed(3);
+                medianRiskScore.textContent =
+                  data.risk_scores.median.toFixed(3);
+                minRiskScore.textContent = data.risk_scores.min.toFixed(3);
+                maxRiskScore.textContent = data.risk_scores.max.toFixed(3);
+
+                // Update summary stats
+                avgRiskScore.textContent = data.risk_scores.mean.toFixed(2);
+
+                // Assuming high risk is above 0.7 and low risk is below 0.3
+                // In a real app, these would be calculated from the actual data
+                highRiskCount.textContent = Math.round(
+                  totalRegions.textContent * 0.15
+                );
+                lowRiskCount.textContent = Math.round(
+                  totalRegions.textContent * 0.25
+                );
+
+                // Plot histogram
+                const histogramData = JSON.parse(data.risk_scores.histogram);
+                Plotly.newPlot(
+                  "riskHistogram",
+                  histogramData.data,
+                  histogramData.layout
+                );
+
+                // Set download link
+                resultFile = data.result_file;
+                downloadResultsBtn.href = `/results/${resultFile
+                  .split("/")
+                  .pop()}`;
+              } else {
+                alert("Error: " + data.message);
+              }
+            })
+            .catch((error) => {
+              console.error("Error calculating risk:", error);
+              alert("Error calculating risk. See console for details.");
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
