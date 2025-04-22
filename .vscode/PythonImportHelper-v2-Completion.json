@@ -1,0 +1,554 @@
+[
+    {
+        "label": "RiskScoringModel",
+        "importPath": "src.risk_scoring",
+        "description": "src.risk_scoring",
+        "isExtraImport": true,
+        "detail": "src.risk_scoring",
+        "documentation": {}
+    },
+    {
+        "label": "RiskScoringModel",
+        "importPath": "src.risk_scoring",
+        "description": "src.risk_scoring",
+        "isExtraImport": true,
+        "detail": "src.risk_scoring",
+        "documentation": {}
+    },
+    {
+        "label": "GeospatialProcessor",
+        "importPath": "src.geospatial_processor",
+        "description": "src.geospatial_processor",
+        "isExtraImport": true,
+        "detail": "src.geospatial_processor",
+        "documentation": {}
+    },
+    {
+        "label": "GeospatialProcessor",
+        "importPath": "src.geospatial_processor",
+        "description": "src.geospatial_processor",
+        "isExtraImport": true,
+        "detail": "src.geospatial_processor",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_from_directory",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "geopandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "geopandas",
+        "description": "geopandas",
+        "detail": "geopandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "plotly",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly",
+        "description": "plotly",
+        "detail": "plotly",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.express",
+        "description": "plotly.express",
+        "detail": "plotly.express",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.graph_objects",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.graph_objects",
+        "description": "plotly.graph_objects",
+        "detail": "plotly.graph_objects",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "shapely.geometry",
+        "description": "shapely.geometry",
+        "isExtraImport": true,
+        "detail": "shapely.geometry",
+        "documentation": {}
+    },
+    {
+        "label": "Polygon",
+        "importPath": "shapely.geometry",
+        "description": "shapely.geometry",
+        "isExtraImport": true,
+        "detail": "shapely.geometry",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "shapely.geometry",
+        "description": "shapely.geometry",
+        "isExtraImport": true,
+        "detail": "shapely.geometry",
+        "documentation": {}
+    },
+    {
+        "label": "Polygon",
+        "importPath": "shapely.geometry",
+        "description": "shapely.geometry",
+        "isExtraImport": true,
+        "detail": "shapely.geometry",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "shapely.geometry",
+        "description": "shapely.geometry",
+        "isExtraImport": true,
+        "detail": "shapely.geometry",
+        "documentation": {}
+    },
+    {
+        "label": "Polygon",
+        "importPath": "shapely.geometry",
+        "description": "shapely.geometry",
+        "isExtraImport": true,
+        "detail": "shapely.geometry",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "folium",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "folium",
+        "description": "folium",
+        "detail": "folium",
+        "documentation": {}
+    },
+    {
+        "label": "rasterio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "rasterio",
+        "description": "rasterio",
+        "detail": "rasterio",
+        "documentation": {}
+    },
+    {
+        "label": "MinMaxScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestRegressor",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "GradientBoostingRegressor",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "cross_val_score",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "mean_squared_error",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "r2_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def index():\n    \"\"\"Render the main dashboard page.\"\"\"\n    return render_template('index.html')\n@app.route('/data')\ndef data():\n    \"\"\"Render the data management page.\"\"\"\n    return render_template('data.html')\n@app.route('/analysis')\ndef analysis():\n    \"\"\"Render the risk analysis page.\"\"\"",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def data():\n    \"\"\"Render the data management page.\"\"\"\n    return render_template('data.html')\n@app.route('/analysis')\ndef analysis():\n    \"\"\"Render the risk analysis page.\"\"\"\n    return render_template('analysis.html')\n@app.route('/api/load-sample-data', methods=['POST'])\ndef load_sample_data():\n    \"\"\"API endpoint to load sample data.\"\"\"",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "analysis",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def analysis():\n    \"\"\"Render the risk analysis page.\"\"\"\n    return render_template('analysis.html')\n@app.route('/api/load-sample-data', methods=['POST'])\ndef load_sample_data():\n    \"\"\"API endpoint to load sample data.\"\"\"\n    try:\n        # Check if sample data exists\n        if not os.path.exists(SAMPLE_SHAPEFILE):\n            return jsonify({",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "load_sample_data",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def load_sample_data():\n    \"\"\"API endpoint to load sample data.\"\"\"\n    try:\n        # Check if sample data exists\n        if not os.path.exists(SAMPLE_SHAPEFILE):\n            return jsonify({\n                'success': False,\n                'message': 'Sample data not found. Please upload data first.'\n            }), 404\n        # Load the shapefile",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "get_risk_factors",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def get_risk_factors():\n    \"\"\"API endpoint to get available risk factors.\"\"\"\n    # In a real system, this would be dynamic based on loaded data\n    risk_factors = [\n        {'id': 'flood_risk', 'name': 'Flood Risk',\n            'weight': DEFAULT_WEIGHTS['flood_risk']},\n        {'id': 'wildfire_risk', 'name': 'Wildfire Risk',\n            'weight': DEFAULT_WEIGHTS['wildfire_risk']},\n        {'id': 'earthquake_risk', 'name': 'Earthquake Risk',\n            'weight': DEFAULT_WEIGHTS['earthquake_risk']},",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_risk",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def calculate_risk():\n    \"\"\"API endpoint to calculate risk scores based on provided weights.\"\"\"\n    try:\n        # Get weights from request\n        data = request.json\n        weights = data.get('weights', DEFAULT_WEIGHTS)\n        # Load sample data if not already loaded\n        if 'regions' not in processor.data_sources:\n            gdf = processor.load_shapefile('regions', SAMPLE_SHAPEFILE)\n        else:",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "explain_risk",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def explain_risk(region_id):\n    \"\"\"API endpoint to explain risk factors for a specific region.\"\"\"\n    try:\n        region_id = int(region_id)\n        # In a real system, we would look up the actual region\n        # Here we'll simulate with random contribution data\n        # Get risk factors and their weights\n        factors = list(DEFAULT_WEIGHTS.keys())\n        weights = list(DEFAULT_WEIGHTS.values())\n        # Generate random contributions that sum to 1",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "download_result",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "def download_result(filename):\n    \"\"\"Endpoint to download result files.\"\"\"\n    return send_from_directory(RESULTS_DIR, filename, as_attachment=True)\nif __name__ == '__main__':\n    app.run(debug=True, host='0.0.0.0', port=5000)",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "app = Flask(__name__)\n# Initialize processor and model\nprocessor = GeospatialProcessor()\nrisk_model = RiskScoringModel(model_type='weighted_sum')\n# Sample data paths - these would be configured properly in production\nSAMPLE_DATA_DIR = os.path.join(os.path.dirname(__file__), '../data')\nSAMPLE_SHAPEFILE = os.path.join(SAMPLE_DATA_DIR, 'sample_regions.shp')\nRESULTS_DIR = os.path.join(os.path.dirname(__file__), '../results')\n# Ensure results directory exists\nos.makedirs(RESULTS_DIR, exist_ok=True)",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "processor",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "processor = GeospatialProcessor()\nrisk_model = RiskScoringModel(model_type='weighted_sum')\n# Sample data paths - these would be configured properly in production\nSAMPLE_DATA_DIR = os.path.join(os.path.dirname(__file__), '../data')\nSAMPLE_SHAPEFILE = os.path.join(SAMPLE_DATA_DIR, 'sample_regions.shp')\nRESULTS_DIR = os.path.join(os.path.dirname(__file__), '../results')\n# Ensure results directory exists\nos.makedirs(RESULTS_DIR, exist_ok=True)\n# Default risk factor weights\nDEFAULT_WEIGHTS = {",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "risk_model",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "risk_model = RiskScoringModel(model_type='weighted_sum')\n# Sample data paths - these would be configured properly in production\nSAMPLE_DATA_DIR = os.path.join(os.path.dirname(__file__), '../data')\nSAMPLE_SHAPEFILE = os.path.join(SAMPLE_DATA_DIR, 'sample_regions.shp')\nRESULTS_DIR = os.path.join(os.path.dirname(__file__), '../results')\n# Ensure results directory exists\nos.makedirs(RESULTS_DIR, exist_ok=True)\n# Default risk factor weights\nDEFAULT_WEIGHTS = {\n    'flood_risk': 2.0,",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "SAMPLE_DATA_DIR",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "SAMPLE_DATA_DIR = os.path.join(os.path.dirname(__file__), '../data')\nSAMPLE_SHAPEFILE = os.path.join(SAMPLE_DATA_DIR, 'sample_regions.shp')\nRESULTS_DIR = os.path.join(os.path.dirname(__file__), '../results')\n# Ensure results directory exists\nos.makedirs(RESULTS_DIR, exist_ok=True)\n# Default risk factor weights\nDEFAULT_WEIGHTS = {\n    'flood_risk': 2.0,\n    'wildfire_risk': 1.5,\n    'earthquake_risk': 1.8,",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "SAMPLE_SHAPEFILE",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "SAMPLE_SHAPEFILE = os.path.join(SAMPLE_DATA_DIR, 'sample_regions.shp')\nRESULTS_DIR = os.path.join(os.path.dirname(__file__), '../results')\n# Ensure results directory exists\nos.makedirs(RESULTS_DIR, exist_ok=True)\n# Default risk factor weights\nDEFAULT_WEIGHTS = {\n    'flood_risk': 2.0,\n    'wildfire_risk': 1.5,\n    'earthquake_risk': 1.8,\n    'population_density': 1.0,",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "RESULTS_DIR",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "RESULTS_DIR = os.path.join(os.path.dirname(__file__), '../results')\n# Ensure results directory exists\nos.makedirs(RESULTS_DIR, exist_ok=True)\n# Default risk factor weights\nDEFAULT_WEIGHTS = {\n    'flood_risk': 2.0,\n    'wildfire_risk': 1.5,\n    'earthquake_risk': 1.8,\n    'population_density': 1.0,\n    'property_value': 1.2",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_WEIGHTS",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.dashboard.app",
+        "description": "geospatial-risk-assessment.dashboard.app",
+        "peekOfCode": "DEFAULT_WEIGHTS = {\n    'flood_risk': 2.0,\n    'wildfire_risk': 1.5,\n    'earthquake_risk': 1.8,\n    'population_density': 1.0,\n    'property_value': 1.2\n}\n@app.route('/')\ndef index():\n    \"\"\"Render the main dashboard page.\"\"\"",
+        "detail": "geospatial-risk-assessment.dashboard.app",
+        "documentation": {}
+    },
+    {
+        "label": "create_sample_regions",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.data.generate_sample_data",
+        "description": "geospatial-risk-assessment.data.generate_sample_data",
+        "peekOfCode": "def create_sample_regions(n_regions=50):\n    \"\"\"Create synthetic regions for demonstration purposes.\"\"\"\n    # Create random polygons as regions\n    regions = []\n    for i in range(n_regions):\n        # Create a random center point\n        center_x = np.random.uniform(0, 100)\n        center_y = np.random.uniform(0, 100)\n        # Create points around the center\n        angles = np.linspace(0, 2*np.pi, 6)",
+        "detail": "geospatial-risk-assessment.data.generate_sample_data",
+        "documentation": {}
+    },
+    {
+        "label": "generate_risk_factors",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.data.generate_sample_data",
+        "description": "geospatial-risk-assessment.data.generate_sample_data",
+        "peekOfCode": "def generate_risk_factors(gdf):\n    \"\"\"Generate synthetic risk factors for each region.\"\"\"\n    n_regions = len(gdf)\n    # Create a dataframe for the risk factors\n    risk_df = pd.DataFrame(index=gdf.index)\n    # Get centroids\n    x_coords = np.array([geom.centroid.x for geom in gdf.geometry])\n    y_coords = np.array([geom.centroid.y for geom in gdf.geometry])\n    # Generate flood risk based on y-coordinate (lower = higher risk)\n    risk_df['flood_risk'] = 1 - (y_coords / y_coords.max())",
+        "detail": "geospatial-risk-assessment.data.generate_sample_data",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.data.generate_sample_data",
+        "description": "geospatial-risk-assessment.data.generate_sample_data",
+        "peekOfCode": "def main():\n    \"\"\"Generate sample data and save it to disk.\"\"\"\n    # Set random seed for reproducibility\n    np.random.seed(42)\n    print(\"Generating sample geospatial data for GRA system...\")\n    # Create sample regions\n    print(\"Creating synthetic regions...\")\n    regions_gdf = create_sample_regions(50)\n    # Add risk factors\n    print(\"Generating risk factors...\")",
+        "detail": "geospatial-risk-assessment.data.generate_sample_data",
+        "documentation": {}
+    },
+    {
+        "label": "create_sample_regions",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.src.demo",
+        "description": "geospatial-risk-assessment.src.demo",
+        "peekOfCode": "def create_sample_regions(n_regions=50):\n    \"\"\"Create synthetic regions for demonstration purposes.\"\"\"\n    # Create random polygons as regions\n    regions = []\n    for i in range(n_regions):\n        # Create a random center point\n        center_x = np.random.uniform(0, 100)\n        center_y = np.random.uniform(0, 100)\n        # Create points around the center\n        angles = np.linspace(0, 2*np.pi, 6)",
+        "detail": "geospatial-risk-assessment.src.demo",
+        "documentation": {}
+    },
+    {
+        "label": "generate_risk_factors",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.src.demo",
+        "description": "geospatial-risk-assessment.src.demo",
+        "peekOfCode": "def generate_risk_factors(gdf):\n    \"\"\"Generate synthetic risk factors for each region.\"\"\"\n    n_regions = len(gdf)\n    # Create a dataframe for the risk factors\n    risk_df = pd.DataFrame(index=gdf.index)\n    # Generate flood risk based on y-coordinate (lower = higher risk)\n    y_coords = np.array([geom.centroid.y for geom in gdf.geometry])\n    risk_df['flood_risk'] = 1 - (y_coords / y_coords.max())\n    # Generate wildfire risk based on x-coordinate (higher = higher risk)\n    x_coords = np.array([geom.centroid.x for geom in gdf.geometry])",
+        "detail": "geospatial-risk-assessment.src.demo",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_premiums",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.src.demo",
+        "description": "geospatial-risk-assessment.src.demo",
+        "peekOfCode": "def calculate_premiums(risk_scores, base_premium=1000, max_multiplier=3):\n    \"\"\"Calculate insurance premiums based on risk scores.\"\"\"\n    # Map risk score to a premium multiplier between 1 and max_multiplier\n    multiplier = 1 + (max_multiplier - 1) * risk_scores\n    premiums = base_premium * multiplier\n    return premiums\ndef run_demo(output_dir='../results', n_regions=50, save_plots=True):\n    \"\"\"Run the GRA demonstration.\"\"\"\n    print(\"GRA - Geospatial Risk Assessment Demo\")\n    print(\"=====================================\")",
+        "detail": "geospatial-risk-assessment.src.demo",
+        "documentation": {}
+    },
+    {
+        "label": "run_demo",
+        "kind": 2,
+        "importPath": "geospatial-risk-assessment.src.demo",
+        "description": "geospatial-risk-assessment.src.demo",
+        "peekOfCode": "def run_demo(output_dir='../results', n_regions=50, save_plots=True):\n    \"\"\"Run the GRA demonstration.\"\"\"\n    print(\"GRA - Geospatial Risk Assessment Demo\")\n    print(\"=====================================\")\n    # Create timestamp for output files\n    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')\n    # Ensure output directory exists\n    os.makedirs(output_dir, exist_ok=True)\n    # Set random seed for reproducibility\n    np.random.seed(42)",
+        "detail": "geospatial-risk-assessment.src.demo",
+        "documentation": {}
+    },
+    {
+        "label": "GeospatialProcessor",
+        "kind": 6,
+        "importPath": "geospatial-risk-assessment.src.geospatial_processor",
+        "description": "geospatial-risk-assessment.src.geospatial_processor",
+        "peekOfCode": "class GeospatialProcessor:\n    \"\"\"Core class for processing geospatial data for risk assessment.\"\"\"\n    def __init__(self, config=None):\n        \"\"\"\n        Initialize the GeospatialProcessor.\n        Args:\n            config (dict, optional): Configuration dictionary with processing parameters.\n        \"\"\"\n        self.config = config or {}\n        self.data_sources = {}",
+        "detail": "geospatial-risk-assessment.src.geospatial_processor",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.src.geospatial_processor",
+        "description": "geospatial-risk-assessment.src.geospatial_processor",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass GeospatialProcessor:\n    \"\"\"Core class for processing geospatial data for risk assessment.\"\"\"\n    def __init__(self, config=None):\n        \"\"\"\n        Initialize the GeospatialProcessor.\n        Args:\n            config (dict, optional): Configuration dictionary with processing parameters.\n        \"\"\"\n        self.config = config or {}",
+        "detail": "geospatial-risk-assessment.src.geospatial_processor",
+        "documentation": {}
+    },
+    {
+        "label": "RiskScoringModel",
+        "kind": 6,
+        "importPath": "geospatial-risk-assessment.src.risk_scoring",
+        "description": "geospatial-risk-assessment.src.risk_scoring",
+        "peekOfCode": "class RiskScoringModel:\n    \"\"\"Class to handle the risk scoring models and algorithms.\"\"\"\n    def __init__(self, model_type='random_forest'):\n        \"\"\"\n        Initialize the risk scoring model.\n        Args:\n            model_type (str): Type of model to use. Options: 'random_forest', 'gradient_boosting', 'weighted_sum'\n        \"\"\"\n        self.model_type = model_type\n        self.model = None",
+        "detail": "geospatial-risk-assessment.src.risk_scoring",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "geospatial-risk-assessment.src.risk_scoring",
+        "description": "geospatial-risk-assessment.src.risk_scoring",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass RiskScoringModel:\n    \"\"\"Class to handle the risk scoring models and algorithms.\"\"\"\n    def __init__(self, model_type='random_forest'):\n        \"\"\"\n        Initialize the risk scoring model.\n        Args:\n            model_type (str): Type of model to use. Options: 'random_forest', 'gradient_boosting', 'weighted_sum'\n        \"\"\"\n        self.model_type = model_type",
+        "detail": "geospatial-risk-assessment.src.risk_scoring",
+        "documentation": {}
+    }
+]
